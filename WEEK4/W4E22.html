@@ -1,0 +1,56 @@
+<!--  Implement a Javascript function that accept number of rows(m) and columns(n) 
+from user and displays a 2D m x n square layout of alternate colorsblack and red. 
+
+
+Steps:
+1. Create a single block: create stylesheet in head, then create a div in body with class = 'inner', then in style .inner{ height: 100px; width:100px; background-color:black;
+2. Repeat above multiple times(write an internal script) : below div, create script element type="text/javascript" and then enter rows and cols from user. then run loop: for (i = 0; i < cols; i++) document.write("<div class = 'inner'></div>")
+3. <div class = 'container'></div> and iske andar contain krwao script wala code; in .container, use: {display:flex;
+4. now run another loop for(j=0; j<rows; j++) this is outer one and before inner loop: document.write("<div class = 'container'> and close this <div> in 2nd loop")
+5. now create 2 inner classes inner1(with black color) and inner2(with white color) use condition if ((i+j)%2 == 0) to write inner1 class and else mein  write inner2 class -->
+
+<html>
+    <head>
+        <title>W4E22</title>
+        <style>
+            .inner1 { 
+                height: 100px; 
+                width: 100px; 
+                background-color:black;
+            }
+
+            .inner2 { 
+                height: 100px; 
+                width: 100px; 
+                background-color:white;
+            }
+
+            .container {
+                display: flex;
+            }
+
+            .inner1:hover, .inner2:hover {
+                background-color: red;
+                font-size: x-large;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 style = "font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 17px; color:indianred;">This is a javascript implementation of Week 4 Exercise 22.</h1>
+            <script type = "text/javascript">
+                rows = prompt("Enter number of rows.")
+                cols = prompt("Enter number of columns.")
+                for(j = 0; j < rows; j++) 
+                {    document.write("<div class = 'container'>")
+                    for (i = 0; i < cols; i++) {
+                        if ((i+j)%2 == 0) 
+                            document.write("<div class = 'inner1'></div>")
+                        else 
+                            document.write("<div class = 'inner2'></div>")
+                                               
+                    }document.write("</div>") 
+                }
+            </script>
+    </body>
+</html>

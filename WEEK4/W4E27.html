@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JS Implementation of a Clock
+    </title>
+    <style>
+        * {
+            background-color: lavender;
+        }
+
+        #clock {
+            color: cornflowerblue;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="color:coral; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">This is a
+        clock implemented using JavaScript</h1>
+    <div id='clock'>
+        <script>
+            function clock() {
+                d = new Date();
+                hh = d.getHours();
+                mm = d.getMinutes();
+                ss = d.getSeconds();
+                if (mm < 10) {
+                    mm = "0" + d.getMinutes();
+                }
+                if (ss < 10) {
+                    ss = "0" + d.getSeconds();
+                }
+                cTime = hh + " : " + mm + " : " + ss;
+                block = document.getElementById('clock');
+                block.innerHTML = cTime;
+            }
+
+            setInterval(clock, 1000);
+        </script>
+    </div>
+</body>
+
+</html>

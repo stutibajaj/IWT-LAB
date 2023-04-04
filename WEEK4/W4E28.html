@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS Implementation of a Counter
+        </title>
+        <style>
+            *{
+                background-color:lavender;
+            }
+            .divStart {
+                background-color: white;
+                border-color: cornflowerblue;
+                border-radius: 5px;
+                border-width: 2px;
+            }
+            .startButton {
+                text-shadow: 3px;
+                align-content: center;
+                color: white;
+            }
+            .divStop {
+                background-color: white;
+                border-color: cornflowerblue;
+                border-radius: 5px;
+                border-width: 2px;
+            }
+            .stopButton {
+                text-shadow: 3px;
+                align-content: center;
+                color: white;
+            }
+
+            #counter {
+                box-sizing: 60px;
+                box-shadow: 5px;
+                background-color:cornflowerblue;
+                font-size: 50px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                box-shadow: 5px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1 style = "color:coral; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">This is a counter implemented using JavaScript</h1>
+        <div id = 'counter'>
+            <script>
+                count = 0;
+                function start() {
+                    block = document.getElementById('counter');
+                    block.innerHTML = count;
+                    count++;
+                }
+
+                function restart() {
+                    block = document.getElementById('counter');
+                    block.innerHTML = 0;
+                    count++;
+                }
+            </script>
+        </div>
+        <div id = 'counter'>
+            <button onclick = "x = setInterval(start, 1000)">Start</button>
+        </div>
+        <br><br>
+        <div id = 'counter'>
+            <button onclick = "clearInterval(x)">Stop</button>
+        </div>
+        <br><br>
+        <div id = 'counter'>
+            <button onclick = "y = setInterval(restart, 1000)">Re-Start</button>
+        </div>
+  
+
+    </body>
+</html>

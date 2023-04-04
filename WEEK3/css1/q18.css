@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(192, 198, 248);
+    }
+    h1{
+        left:25%;
+        position: absolute;
+        top:50%;
+        color:rgb(85, 22, 195);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bolder;
+        font-size: 50px;
+    }
+    div{
+        border: 2px solid rgb(139, 158, 177);
+        width:200px;
+        height:200px;
+        background-color: rgb(237, 230, 97);
+        margin:20px auto;
+        -webkit-animation: rescale 2s infinite;
+        animation: rescale 2s infinite; 
+    }
+    
+    @-webkit-keyframes rescale{
+    0% {transform:rotate(0deg);}
+    10% {transform:rotate(36deg);}
+    20% {transform:rotate(72deg);}
+    30% {transform:rotate(108deg);}
+    40% {transform:rotate(144deg);}
+    50% {transform:rotate(180deg);}
+    60% {transform:rotate(216deg);}
+    70% {transform:rotate(252deg);}
+    80% {transform:rotate(288deg);}
+    90% {transform:rotate(334deg);}
+    100% {transform:rotate(360deg);}
+    }
+    
+    @keyframes rescale{
+        0% {transform:rotate(0deg);}
+        10% {transform:rotate(36deg);}
+        20% {transform:rotate(72deg);}
+        30% {transform:rotate(108deg);}
+        40% {transform:rotate(144deg);}
+        50% {transform:rotate(180deg);}
+        60% {transform:rotate(216deg);}
+        70% {transform:rotate(252deg);}
+        80% {transform:rotate(288deg);}
+        90% {transform:rotate(334deg);}
+        100% {transform:rotate(360deg);}
+    }
+    

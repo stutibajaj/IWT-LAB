@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            W4E24
+        </title>
+       
+    </head>
+    <body style = "background-color: cornflowerblue;">
+        <script>
+            function converter () {
+                inputTemp = document.forms[0].elements[0].value;
+                inputOption = document.forms[0].elements[1].value;
+                outputOption = document.forms[0].elements[3].value;
+
+                if (inputOption == 'Celsius' && outputOption == 'Kelvin') {
+                    result = parseFloat(parseInt(inputTemp) + 273);
+                }
+
+                else if (inputOption == 'Celsius' && outputOption == 'Fahrenheit') {
+                    result = parseFloat((inputTemp * (9/5)) + 32);
+                }
+
+                else if (inputOption == 'Fahrenheit' && outputOption == 'Celsius') {
+                    result = parseFloat((5/9) * (inputTemp - 32));
+                }
+
+                else if (inputOption == 'Fahrenheit' && outputOption == 'Kelvin') {
+                    result = parseFloat(((inputTemp - 32) * (5/9)) + 273);
+                }
+
+
+                else if (inputOption == 'Kelvin' && outputOption == 'Celsius') {
+                    result = parseFloat(inputTemp - 273);
+                }
+
+                else if (inputOption == 'Kelvin' && outputOption == 'Fahrenheit') {
+                    result = parseFloat(((inputTemp - 273) * (9/5)) + 32);
+                }
+                else
+                    {
+                        result = parseFloat(inputTemp);
+                }
+                document.forms[0].elements[2].value = parseFloat(result);
+            }
+        </script>
+        <h1  align = "center" style = "color:coral; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 40px;">JavaScript Temperature Converter</h1>
+        <form method = "get" align = "center">
+            <input type = "text" name = "inputTemp" value = "" placeholder = "Enter temperature..." onchange = 'converter()' style = "color:coral; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;" />
+            <select name = "inputOption" onchange = 'converter()' style = "color:coral; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;"> 
+                <option>Celsius</option>
+                <option>Fahrenheit</option>
+                <option>Kelvin</option>
+            </select>
+
+            <input type = "text" name = "outputTemp" value = "" placeholder = "Output appears here..." style = "color:coral; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;" />
+            <select name = "outputOption" onchange = 'converter()' style = "color:coral; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;"> 
+                <option>Celsius</option>
+                <option>Fahrenheit</option>
+                <option>Kelvin</option>
+            </select>   
+        </form>
+        <br> <br>
+        <!-- <button onclick = 'converter()' style = "color:coral; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">Convert</button> -->
+    </body>
+</html>
